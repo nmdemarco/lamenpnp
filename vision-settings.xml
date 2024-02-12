@@ -41,24 +41,6 @@
       <parallax-diameter value="0.0" units="Millimeters"/>
       <max-linear-offset value="0.2" units="Millimeters"/>
    </vision-settings>
-   <vision-settings class="org.openpnp.model.FiducialVisionSettings" id="FVS_Default" name="- Default Machine Fiducial Locator -" enabled="true" parallax-angle="0.0" max-vision-passes="3">
-      <cv-pipeline>
-         <stages>
-            <cv-stage class="org.openpnp.vision.pipeline.stages.ImageCapture" name="image" enabled="true" default-light="true" settle-option="Settle" count="1"/>
-            <cv-stage class="org.openpnp.vision.pipeline.stages.ImageWriteDebug" name="deb0" enabled="false" prefix="fidloc_source_" suffix=".png"/>
-            <cv-stage class="org.openpnp.vision.pipeline.stages.BlurGaussian" name="blur" enabled="false" kernel-size="3" property-name="BlurGaussian"/>
-            <cv-stage class="org.openpnp.vision.pipeline.stages.DetectCircularSymmetry" name="circular" enabled="true" min-diameter="10" max-diameter="100" max-distance="200" search-width="0" search-height="0" max-target-count="1" min-symmetry="1.2" corr-symmetry="0.0" outer-margin="0.2" inner-margin="0.4" sub-sampling="8" super-sampling="8" symmetry-score="OverallVarianceVsRingVarianceSum" property-name="fiducial" diagnostics="true" heat-map="false"/>
-            <cv-stage class="org.openpnp.vision.pipeline.stages.ConvertModelToKeyPoints" name="results" enabled="true" model-stage-name="circular"/>
-            <cv-stage class="org.openpnp.vision.pipeline.stages.DrawCircles" name="draw" enabled="false" circles-stage-name="circular" thickness="1">
-               <color r="255" g="255" b="0" a="255"/>
-               <center-color r="255" g="153" b="0" a="255"/>
-            </cv-stage>
-            <cv-stage class="org.openpnp.vision.pipeline.stages.ImageWriteDebug" name="deb1" enabled="false" prefix="fidloc_results_" suffix=".png"/>
-         </stages>
-      </cv-pipeline>
-      <parallax-diameter value="0.0" units="Millimeters"/>
-      <max-linear-offset value="0.2" units="Millimeters"/>
-   </vision-settings>
    <vision-settings class="org.openpnp.model.BottomVisionSettings" id="BVS_Stock" name="- Stock Bottom Vision Settings -" enabled="true" pre-rotate-usage="Default" check-part-size-method="Disabled" check-size-tolerance-percent="20" max-rotation="Adjust" asymmetric="false">
       <cv-pipeline>
          <stages>
@@ -160,5 +142,23 @@
          </stages>
       </cv-pipeline>
       <vision-offset units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
+   </vision-settings>
+   <vision-settings class="org.openpnp.model.FiducialVisionSettings" id="FVS17b2f12aeb1dfdb8" name="FiducialVisionSettings" enabled="true" parallax-angle="0.0" max-vision-passes="3">
+      <cv-pipeline>
+         <stages>
+            <cv-stage class="org.openpnp.vision.pipeline.stages.ImageCapture" name="image" enabled="true" default-light="true" settle-option="Settle" count="1"/>
+            <cv-stage class="org.openpnp.vision.pipeline.stages.ImageWriteDebug" name="deb0" enabled="false" prefix="fidloc_source_" suffix=".png"/>
+            <cv-stage class="org.openpnp.vision.pipeline.stages.BlurGaussian" name="blur" enabled="false" kernel-size="3" property-name="BlurGaussian"/>
+            <cv-stage class="org.openpnp.vision.pipeline.stages.DetectCircularSymmetry" name="circular" enabled="true" min-diameter="10" max-diameter="100" max-distance="200" search-width="0" search-height="0" max-target-count="1" min-symmetry="1.2" corr-symmetry="0.0" outer-margin="0.2" inner-margin="0.4" sub-sampling="8" super-sampling="8" symmetry-score="OverallVarianceVsRingVarianceSum" property-name="fiducial" diagnostics="true" heat-map="false"/>
+            <cv-stage class="org.openpnp.vision.pipeline.stages.ConvertModelToKeyPoints" name="results" enabled="true" model-stage-name="circular"/>
+            <cv-stage class="org.openpnp.vision.pipeline.stages.DrawCircles" name="draw" enabled="false" circles-stage-name="circular" thickness="1">
+               <color r="255" g="255" b="0" a="255"/>
+               <center-color r="255" g="153" b="0" a="255"/>
+            </cv-stage>
+            <cv-stage class="org.openpnp.vision.pipeline.stages.ImageWriteDebug" name="deb1" enabled="false" prefix="fidloc_results_" suffix=".png"/>
+         </stages>
+      </cv-pipeline>
+      <parallax-diameter value="0.0" units="Millimeters"/>
+      <max-linear-offset value="0.2" units="Millimeters"/>
    </vision-settings>
 </openpnp-vision-settings>

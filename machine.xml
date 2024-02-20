@@ -1,9 +1,9 @@
 <openpnp-machine>
    <machine class="org.openpnp.machine.reference.ReferenceMachine" speed="1.0" auto-tool-select="true" safe-Z-park="true">
       <axes>
-         <axis class="org.openpnp.machine.reference.axis.ReferenceControllerAxis" id="AXS17b3200ed6c4844b" name="X" type="X" driver-id="DRV17b3200ed68adb76" letter="X" backlash-compensation-method="DirectionalCompensation" backlash-speed-factor="1.0" limit-rotation="false" wrap-around-rotation="false" invert-linear-rotational="false" soft-limit-low-enabled="true" soft-limit-high-enabled="true" safe-zone-low-enabled="false" safe-zone-high-enabled="false" version="2.0">
+         <axis class="org.openpnp.machine.reference.axis.ReferenceControllerAxis" id="AXS17b3200ed6c4844b" name="X" type="X" driver-id="DRV17b3200ed68adb76" letter="X" backlash-compensation-method="None" backlash-speed-factor="1.0" limit-rotation="false" wrap-around-rotation="false" invert-linear-rotational="false" soft-limit-low-enabled="true" soft-limit-high-enabled="true" safe-zone-low-enabled="false" safe-zone-high-enabled="false" version="2.0">
             <home-coordinate value="0.0" units="Millimeters"/>
-            <acceptable-tolerance value="0.05" units="Millimeters"/>
+            <acceptable-tolerance value="0.03" units="Millimeters"/>
             <backlash-offset value="0.1288109885747218" units="Millimeters"/>
             <sneak-up-offset value="0.0" units="Millimeters"/>
             <soft-limit-low value="0.0" units="Millimeters"/>
@@ -303,8 +303,8 @@
                </actuator>
             </actuators>
             <cameras>
-               <camera class="org.openpnp.machine.reference.camera.OpenPnpCaptureCamera" axis-X-id="AXS17b3200ed6c4844b" axis-Y-id="AXS17b3200ed6dbb85c" axis-Z-id="AXS17b360c9e7421608" axis-rotation-id="AXS17b360cc8433a8df" id="C1" name="Top" looking="Down" auto-visible="true" shown-in-multi-camera-view="true" before-capture-light-on="true" user-action-light-on="true" after-capture-light-off="false" anti-glare-light-off="true" enable-units-per-pixel-3-d="true" auto-view-plane-z="false" max-relative-motion="0.05" min-motion-template-match-score="0.9" min-contrast-range="16.0" settle-method="Motion" settle-time-ms="250" settle-timeout-ms="600" settle-threshold="1.0" settle-debounce="2" settle-full-color="false" settle-gaussian-blur="19" settle-gradients="false" settle-mask-circle="0.0" settle-contrast-enhance="0.0" settle-diagnostics="true" fps="5.0" suspend-preview-in-tasks="true" capture-try-count="4" capture-try-timeout-ms="2000" rotation="0.0744214706202318" flip-x="true" flip-y="true" offset-x="0" offset-y="0" crop-width="0" crop-height="0" scale-width="0" scale-height="0" red-balance="1.3806818181818181" green-balance="1.3064516129032258" blue-balance="1.0" red-gamma="1.2703925021733797" green-gamma="0.8645587190996417" blue-gamma="0.869083459598604" deinterlace="false" light-actuator-id="AL2" allow-machine-actuators="true" focus-sensing-method="None" white-balance-lead-fractile="0.8" white-balance-clip-fractile="0.99" white-balance-gamma-fractile="0.5" unique-id="PnP Top Camera: PnP Top Camera usb-0000:00:1d.0-1.5" format-id="0" freeze-properties="false">
-                  <units-per-pixel units="Millimeters" x="0.013502200060243219" y="0.013567972781483096" z="4.6530000000000005" rotation="0.0"/>
+               <camera class="org.openpnp.machine.reference.camera.OpenPnpCaptureCamera" axis-X-id="AXS17b3200ed6c4844b" axis-Y-id="AXS17b3200ed6dbb85c" axis-Z-id="AXS17b360c9e7421608" axis-rotation-id="AXS17b360cc8433a8df" id="C1" name="Top" looking="Down" auto-visible="true" shown-in-multi-camera-view="true" before-capture-light-on="true" user-action-light-on="true" after-capture-light-off="false" anti-glare-light-off="true" enable-units-per-pixel-3-d="true" auto-view-plane-z="false" max-relative-motion="0.05" min-motion-template-match-score="0.9" min-contrast-range="16.0" settle-method="Motion" settle-time-ms="250" settle-timeout-ms="600" settle-threshold="1.0" settle-debounce="2" settle-full-color="false" settle-gaussian-blur="19" settle-gradients="false" settle-mask-circle="0.0" settle-contrast-enhance="0.0" settle-diagnostics="true" fps="5.0" suspend-preview-in-tasks="true" capture-try-count="4" capture-try-timeout-ms="2000" rotation="0.31366526979792375" flip-x="true" flip-y="true" offset-x="0" offset-y="0" crop-width="0" crop-height="0" scale-width="0" scale-height="0" red-balance="1.3806818181818181" green-balance="1.3064516129032258" blue-balance="1.0" red-gamma="1.2703925021733797" green-gamma="0.8645587190996417" blue-gamma="0.869083459598604" deinterlace="false" light-actuator-id="AL2" allow-machine-actuators="true" focus-sensing-method="None" white-balance-lead-fractile="0.8" white-balance-clip-fractile="0.99" white-balance-gamma-fractile="0.5" unique-id="PnP Top Camera: PnP Top Camera usb-0000:00:1d.0-1.5" format-id="0" freeze-properties="false">
+                  <units-per-pixel units="Millimeters" x="0.013510782388453895" y="0.013585068477187661" z="4.6530000000000005" rotation="0.0"/>
                   <units-per-pixel-secondary units="Millimeters" x="0.011681218653773218" y="0.011729588089192569" z="8.453000000000001" rotation="0.0"/>
                   <camera-primary-z value="0.0" units="Millimeters"/>
                   <camera-secondary-z value="0.0" units="Millimeters"/>
@@ -315,7 +315,7 @@
                      <camera-matrix length="9">0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0</camera-matrix>
                      <distortion-coefficients length="5">0.0, 0.0, 0.0, 0.0, 0.0</distortion-coefficients>
                   </calibration>
-                  <advanced-calibration enabled="true" overriding-old-transforms-and-distortion-correction-settings="true" valid="true" data-available="true" alpha-percent="100" rotation-error-z="0.020011026022521517" rotation-error-y="-0.6578438084254973" rotation-error-x="3.6928141635283325" rms-error="1.888780718462512" desired-radial-lines-per-test-pattern="32" test-pattern-fill-fraction="0.9" walking-loop-gain="0.5" approximate-camera-f="1998.333098818329" mirrored="1.0" apparent-motion-direction="-1.0" width-fov="33.48964443473267" height-fov="19.35791556101455" virtual-width-fov="36.161538014791006" virtual-height-fov="27.434896829783543" disable-tilt-correction="false" disable-distortion-correction="false" disable-tangential-distortion-correction="true" version="1.5" raw-cropped-image-width="1280" raw-cropped-image-height="720">
+                  <advanced-calibration enabled="false" overriding-old-transforms-and-distortion-correction-settings="false" valid="false" data-available="true" alpha-percent="100" rotation-error-z="0.020011026022521517" rotation-error-y="-0.6578438084254973" rotation-error-x="3.6928141635283325" rms-error="1.888780718462512" desired-radial-lines-per-test-pattern="32" test-pattern-fill-fraction="0.9" walking-loop-gain="0.5" approximate-camera-f="1998.333098818329" mirrored="1.0" apparent-motion-direction="-1.0" width-fov="33.48964443473267" height-fov="19.35791556101455" virtual-width-fov="36.161538014791006" virtual-height-fov="27.434896829783543" disable-tilt-correction="false" disable-distortion-correction="false" disable-tangential-distortion-correction="true" version="1.5" raw-cropped-image-width="1280" raw-cropped-image-height="720">
                      <camera-matrix length="9">2127.1836312358846, 0.0, 639.5, 0.0, 2110.7538729442686, 359.5, 0.0, 0.0, 1.0</camera-matrix>
                      <distortion-coefficients length="5">-0.20916759969277549, -5.144929555859875, 0.0, 0.0, 38.22054659242907</distortion-coefficients>
                      <pipeline>
@@ -355,7 +355,7 @@
                   <back-light-compensation property="BackLightCompensation" value="1"/>
                   <brightness property="Brightness" value="0"/>
                   <contrast property="Contrast" value="128"/>
-                  <exposure property="Exposure" value="23" auto="false"/>
+                  <exposure property="Exposure" value="30" auto="false"/>
                   <focus property="Focus"/>
                   <gain property="Gain"/>
                   <gamma property="Gamma" value="100"/>
@@ -364,16 +364,16 @@
                   <saturation property="Saturation" value="64"/>
                   <sharpness property="Sharpness" value="0"/>
                   <white-balance property="WhiteBalance" value="4600" auto="false"/>
-                  <zoom property="Zoom"/>
+                  <zoom property="Zoom" value="0"/>
                </camera>
             </cameras>
             <park-location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
             <soft-limits-enabled>false</soft-limits-enabled>
             <pump-actuator-name>Pump1</pump-actuator-name>
             <homing-fiducial-location units="Millimeters" x="218.84695497555086" y="189.47076197935408" z="0.0" rotation="0.0"/>
-            <calibration-primary-fiducial-location units="Millimeters" x="218.7860598436677" y="189.4428497123337" z="4.6530000000000005" rotation="0.0"/>
+            <calibration-primary-fiducial-location units="Millimeters" x="218.6669172426733" y="188.67149961364922" z="4.6530000000000005" rotation="0.0"/>
             <calibration-secondary-fiducial-location units="Millimeters" x="218.67939080871892" y="216.3880829882737" z="8.453000000000001" rotation="0.0"/>
-            <calibration-primary-fiducial-diameter value="0.9991628044579982" units="Millimeters"/>
+            <calibration-primary-fiducial-diameter value="0.7836253785303258" units="Millimeters"/>
             <calibration-secondary-fiducial-diameter value="0.8644101803792181" units="Millimeters"/>
             <calibration-test-object-diameter value="7.210174832169879" units="Millimeters"/>
          </head>
@@ -644,7 +644,7 @@
             <simulated line-ending-type="LF"/>
             <homing-fiducial-location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
             <detected-firmware><![CDATA[FIRMWARE_NAME:Marlin bugfix-2.1.x (Jun 30 2023 17:32:22) SOURCE_CODE_URL:github.com/MarlinFirmware/Marlin PROTOCOL_VERSION:1.0 MACHINE_TYPE:LumenPnP EXTRUDER_COUNT:0 AXIS_COUNT:6 UUID:cede2a2f-41a2-4748-9b12-c55c62f367ff]]></detected-firmware>
-            <reported-axes><![CDATA[X:241.17 Y:214.22 Z:5.15 A:-112.50 B:0.00 C:10000.00 Count X:77433 Y:68445 Z:206 A:-500 B:0 C:400000]]></reported-axes>
+            <reported-axes><![CDATA[X:218.67 Y:188.67 Z:21.95 A:200.00 B:720.00 C:10000.00 Count X:70324 Y:60201 Z:878 A:888 B:3197 C:400000]]></reported-axes>
             <command head-mountable-id="ACT17b3202594be5e19" type="ACTUATE_BOOLEAN_COMMAND">
                <text><![CDATA[{True:M106 P1 S255}{False:M107 P1};]]></text>
                <text><![CDATA[{True:M106}{False:M107};]]></text>
@@ -736,6 +736,15 @@
             </object>
          </entry>
          <entry>
+            <string>MultiPlacementBoardLocationProperties</string>
+            <object class="org.openpnp.gui.processes.MultiPlacementBoardLocationProcess$MultiPlacementBoardLocationProperties">
+               <scaling-tolerance>0.05</scaling-tolerance>
+               <shearing-tolerance>0.05</shearing-tolerance>
+               <board-location-tolerance value="5.0" units="Millimeters"/>
+               <auto-move-for-all-placements>true</auto-move-for-all-placements>
+            </object>
+         </entry>
+         <entry>
             <string>Welcome2_0_Dialog_Shown</string>
             <object class="java.lang.Boolean">true</object>
          </entry>
@@ -759,7 +768,7 @@
             <max-part-diameter value="20.0" units="Millimeters"/>
             <max-part-height value="5.0" units="Millimeters"/>
             <max-pick-tolerance value="0.5" units="Millimeters"/>
-            <calibration angle-subdivisions="6" allow-misdetections="0" angle-start="-200.0" angle-stop="200.0" excenter-ratio="0.25" enabled="true" fail-homing="false" runout-compensation-algorithm="ModelCameraOffsetAffine" version="2.1" recalibration-trigger="MachineHome" background-calibration-method="Brightness" background-min-hue="0" background-max-hue="255" background-tol-hue="8" background-min-saturation="0" background-max-saturation="255" background-tol-saturation="8" background-min-value="0" background-max-value="117" background-tol-value="8" background-diagnostics="&lt;html&gt;Background elements are sufficiently dark. &lt;br/&gt;&lt;/html&gt;" min-background-mask-value="32" max-background-mask-value="128" background-worst-saturation="63" background-worst-hue-span="42" background-worst-value="127" offset-threshold="0.0" detection-threshold-margin="0.4">
+            <calibration angle-subdivisions="6" allow-misdetections="0" angle-start="-200.0" angle-stop="200.0" excenter-ratio="0.25" enabled="true" fail-homing="false" runout-compensation-algorithm="ModelCameraOffsetAffine" version="2.1" recalibration-trigger="MachineHome" background-calibration-method="Brightness" background-min-hue="0" background-max-hue="255" background-tol-hue="8" background-min-saturation="0" background-max-saturation="255" background-tol-saturation="8" background-min-value="0" background-max-value="107" background-tol-value="8" background-diagnostics="&lt;html&gt;Background elements are sufficiently dark. &lt;br/&gt;&lt;/html&gt;" min-background-mask-value="32" max-background-mask-value="128" background-worst-saturation="63" background-worst-hue-span="42" background-worst-value="127" offset-threshold="0.0" detection-threshold-margin="0.4">
                <pipeline>
                   <stages>
                      <cv-stage class="org.openpnp.vision.pipeline.stages.ImageCapture" name="0" enabled="true" default-light="false" settle-option="Settle" count="1">
@@ -775,7 +784,12 @@
                      <cv-stage class="org.openpnp.vision.pipeline.stages.ImageWriteDebug" name="deb1" enabled="false" prefix="runout_calibration_result_" suffix=".png"/>
                   </stages>
                </pipeline>
-               <runout-compensation-lookup class="java.util.HashMap"/>
+               <runout-compensation-lookup class="java.util.HashMap">
+                  <entry>
+                     <string>N1</string>
+                     <runout-compensation class="org.openpnp.machine.reference.ReferenceNozzleTipCalibration$ModelBasedRunoutCameraOffsetCompensation" center-x="0.052633827401544986" center-y="0.06001799537618735" radius="0.08039790569548451" phase-shift="95.65197363327962" units="Millimeters" peak-error="0.026769039987339323" rms-error="0.013883363063548551"/>
+                  </entry>
+               </runout-compensation-lookup>
                <minimum-detail-size value="0.2" units="Millimeters"/>
                <offset-threshold-length value="0.5" units="Millimeters"/>
                <calibration-Z-offset value="0.0" units="Millimeters"/>
@@ -810,7 +824,7 @@
             <board-location-tolerance value="5.0" units="Millimeters"/>
          </tolerances>
       </fiducial-locator>
-      <motion-planner class="org.openpnp.machine.reference.driver.ReferenceAdvancedMotionPlanner" maximum-plan-history="60.0" allow-continuous-motion="false" allow-uncoordinated="false" diagnostics-enabled="false" interpolation-retiming="true" minimum-speed="0.05" show-approximation="true" to-mid-1-speed="1.0" to-mid-2-speed="1.0" to-end-speed="1.0" start-location-enabled="false" mid-1-location-enabled="false" mid-2-location-enabled="false" end-location-enabled="false" to-mid-1-safe-z="true" to-mid-2-safe-z="true" to-end-safe-z="true">
+      <motion-planner class="org.openpnp.machine.reference.driver.ReferenceAdvancedMotionPlanner" maximum-plan-history="60.0" allow-continuous-motion="true" allow-uncoordinated="false" diagnostics-enabled="false" interpolation-retiming="true" minimum-speed="0.05" show-approximation="true" to-mid-1-speed="1.0" to-mid-2-speed="1.0" to-end-speed="1.0" start-location-enabled="false" mid-1-location-enabled="false" mid-2-location-enabled="false" end-location-enabled="false" to-mid-1-safe-z="true" to-mid-2-safe-z="true" to-end-safe-z="true">
          <start-location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
          <mid-location-1 units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
          <mid-location-2 units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
